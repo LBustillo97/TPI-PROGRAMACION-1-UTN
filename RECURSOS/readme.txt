@@ -1,0 +1,1 @@
+acá van a estar los recursos adicionales que necesitemos para el programa (imágenes, videos, pdf, etc).
