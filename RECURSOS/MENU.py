@@ -1,21 +1,24 @@
 import csv
 from BACKEND import *
+
 def menu():
 
     paises = []
 
     try:
-        archivo = open(ARCHIVO, "r", encoding="utf-8")
+
+        archivo = open("CSV/dominio.csv", "r", encoding="utf-8")
+        
 
         lector = csv.DictReader(archivo)
 
         for fila in lector:
 
             pais = {
-                "nombre": fila["nombre"],
-                "poblacion": int(fila["poblacion"]),
-                "superficie": int(fila["superficie"]),
-                "continente": fila["continente"]
+                "Nombre": fila["nombre"],
+                "Poblacion": float(fila["poblacion"]),
+                "Superficie": float(fila["superficie"]),
+                "Continente": fila["continente"]
             }
 
             paises.append(pais)
@@ -43,6 +46,8 @@ def menu():
 
         if opcion == "1":
             mostrar(paises)
+            
+            
 
         elif opcion == "2":
             agregar_pais(paises)
@@ -77,3 +82,5 @@ def menu():
 
 
 menu()
+
+

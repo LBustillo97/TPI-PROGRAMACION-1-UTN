@@ -1,30 +1,22 @@
 import csv
 
-ARCHIVO = "paises.csv"
+
 
 
 
 #GUARDAR DATOS
 
-def guardar_cambios(lista): #lo usamos por ahora para guardar cambios al csv
+def guardar_cambios(lista):
+    with open("CSV/dominio.csv", "w", encoding="utf-8") as archivo:
+        archivo.write("nombre,poblacion,superficie,continente\n")
 
-    archivo = open(ARCHIVO, "w", encoding="utf-8")
-
-    # Escribe el encabezado
-    archivo.write("nombre,poblacion,superficie,continente\n")
-
-    # Escribe cada país
-    for pais in lista:
-        linea = (
-            f"{pais['nombre']},"
-            f"{pais['poblacion']},"
-            f"{pais['superficie']},"
-            f"{pais['continente']}\n"
-        )
-
-        archivo.write(linea)
-
-    archivo.close()
+        for pais in lista:
+            archivo.write(
+                f"{pais['Nombre']},"
+                f"{pais['Poblacion']},"
+                f"{pais['Superficie']},"
+                f"{pais['Continente']}\n"
+            )
 
 
 # ==========================
@@ -39,10 +31,10 @@ def mostrar(lista): #con esta función mostramos la lista de países acorde a lo
 
     for pais in lista:
         print("-----------------------------")
-        print("Nombre:", pais["nombre"])
-        print("Población:", pais["poblacion"])
-        print("Superficie:", pais["superficie"])
-        print("Continente:", pais["continente"])
+        print("Nombre:", pais["Nombre"])
+        print("Población:", pais["Poblacion"])
+        print("Superficie:", pais["Superficie"])
+        print("Continente:", pais["Continente"])
 
 
 # ==========================
@@ -59,7 +51,7 @@ def agregar_pais(lista): #le pedimos los datos del nuevo pais al usuario, cheque
         return
 
     for pais in lista:
-        if pais["nombre"].lower() == nombre.lower():
+        if pais["Nombre"].lower() == nombre.lower():
             print("Ese país ya existe.")
             return
 
@@ -83,10 +75,10 @@ def agregar_pais(lista): #le pedimos los datos del nuevo pais al usuario, cheque
         return
 
     lista.append({
-        "nombre": nombre,
-        "poblacion": poblacion,
-        "superficie": superficie,
-        "continente": continente
+        "Nombre": nombre,
+        "Poblacion": poblacion,
+        "Superficie": superficie,
+        "Continente": continente
     })
 
     guardar_cambios(lista)
@@ -105,14 +97,14 @@ def actualizar_pais(lista):
 
     for pais in lista:#hacemos un bucle donde revisaremos la lista de todos los paises
 
-        if pais["nombre"].lower() == nombre.lower(): #cuando encuentre una coincidencia en la lista, entramos al IF
+        if pais["Nombre"].lower() == nombre.lower(): #cuando encuentre una coincidencia en la lista, entramos al IF
             no_encontrado=False
             try:
-                pais["poblacion"] = int(input("ingrese la nueva población: "))
-                if pais["poblacion"]==0:
+                pais["Poblacion"] = int(input("ingrese la nueva población: "))
+                if pais["Poblacion"]==0:
                     raise ValueError("la nueva población no puede ser cero")
-                pais["superficie"] = int(input("ingrese su nueva superficie: "))
-                if pais["superficie"]==0:
+                pais["Superficie"] = int(input("ingrese su nueva superficie: "))
+                if pais["Superficie"]==0:
                     raise ValueError("la nueva superficie no puede ser cero")
             except:
                 print("Datos inválidos.")
@@ -141,7 +133,7 @@ def buscar_pais(lista):
 
     for pais in lista:
 
-        if texto in pais["nombre"].lower():
+        if texto in pais["Nombre"].lower():
             encontrados.append(pais)
             
             no_encontrado=False
@@ -164,7 +156,7 @@ def filtrar_continente(lista):
     resultado = [] #aqui guardaremos las coincidencias para después mostrarle al usuario
 
     for pais in lista: #hacemos un bucle que recorerrá la base de datos que importamos para encontrar coincidencias
-        if pais["continente"].lower() == continente:
+        if pais["Continente"].lower() == continente:
             resultado.append(pais)
             no_encontrado=False
     if no_encontrado==True:
@@ -173,7 +165,7 @@ def filtrar_continente(lista):
     mostrar(resultado)
 
 
-def filtrar_poblacion(lista):
+def filtrar_poblacion(lista):#sus funciones son parecidas, casi iguales, a filtrar_continente
 
     try:
         minimo = int(input("Población mínima: "))
@@ -191,7 +183,7 @@ def filtrar_poblacion(lista):
     no_encontrado=True
     for pais in lista:
 
-        if minimo <= pais["poblacion"] <= maximo:
+        if minimo <= pais["Poblacion"] <= maximo:
             resultado.append(pais)
             no_encontrado=False
     if no_encontrado==True:
@@ -199,15 +191,15 @@ def filtrar_poblacion(lista):
     mostrar(resultado)
 
 
-def filtrar_superficie(lista):
+def filtrar_superficie(lista):#sus funciones son parecidas, casi iguales, a filtrar_continente
 
     try:
         minimo = int(input("Superficie mínima: "))
-        if minimo<0:
+        if minimo<=0:
             print("ingrese un número válido")
             return
         maximo = int(input("Superficie máxima: "))
-        if maximo<0:
+        if maximo<=0:
             print("ingrese un número válido")
     except:
         print("Valores incorrectos.")
@@ -217,7 +209,7 @@ def filtrar_superficie(lista):
 
     for pais in lista:
 
-        if minimo <= pais["superficie"] <= maximo:
+        if minimo <= pais["Superficie"] <= maximo:
             resultado.append(pais)
 
     mostrar(resultado)
@@ -228,23 +220,29 @@ def filtrar_superficie(lista):
 # ==========================
 
 def ordenar(lista):
-    print("elija bajo qué criterio quiere ordenar la lista:\n1) nombre\n2)población\3)superficie")
+    print("elija bajo qué criterio quiere ordenar la lista:\n1) nombre\n2)población\n3)superficie")
 
 
     opcion = input("Opción: ")
 
     sentido = input("Ascendente(A) Descendente(D): ").upper()
+    if sentido not in ["A", "D"]:
+        print("Opción incorrecta")
+        return
 
-    reversa = sentido == "D"
+    descendiente=False
+    if sentido=="D":
+        descendiente=True
+
 
     if opcion == "1":
-        lista.sort(key=lambda x: x["nombre"], reverse=reversa)
+        lista.sort(key=lambda x: x["Nombre"], reverse=descendiente)
 
     elif opcion == "2":
-        lista.sort(key=lambda x: x["poblacion"], reverse=reversa)
+        lista.sort(key=lambda x: x["Poblacion"], reverse=descendiente)
 
     elif opcion == "3":
-        lista.sort(key=lambda x: x["superficie"], reverse=reversa)
+        lista.sort(key=lambda x: x["Superficie"], reverse=descendiente)
 
     else:
         print("Opción incorrecta.")
@@ -262,37 +260,37 @@ def estadisticas(lista):
     if len(lista) == 0:
         return
 
-    mayor = max(lista, key=lambda x: x["poblacion"])
-    menor = min(lista, key=lambda x: x["poblacion"])
+    mayor = max(lista, key=lambda x: x["Poblacion"])
+    menor = min(lista, key=lambda x: x["Poblacion"])
 
-    promedio_poblacion = sum(p["poblacion"] for p in lista) / len(lista)
+    promedio_poblacion = sum(p["Poblacion"] for p in lista) / len(lista)
 
-    promedio_superficie = sum(p["superficie"] for p in lista) / len(lista)
+    promedio_superficie = sum(p["Superficie"] for p in lista) / len(lista)
 
-    print()
+    
 
-    print("Mayor población:", mayor["nombre"])
+    print("Pais con mayor población:", mayor["Nombre"], "-", mayor["Poblacion"])
 
-    print("Menor población:", menor["nombre"])
+    print("Pais con menor población:", menor["Nombre"], "-", menor["Poblacion"])
 
     print("Promedio población:", round(promedio_poblacion, 2))
 
-    print("Promedio superficie:", round(promedio_superficie, 2))
+    print("Promedio Superficie:", round(promedio_superficie, 2))
 
     continentes = {}
 
     for pais in lista:
 
-        cont = pais["continente"]
+        cont = pais["Continente"]
 
         if cont in continentes:
             continentes[cont] += 1
         else:
             continentes[cont] = 1
 
-    print()
+    
 
-    print("Cantidad por continente:")
+    print("Cantidad de paises por continente:")
 
     for c in continentes:
         print(c, ":", continentes[c])
