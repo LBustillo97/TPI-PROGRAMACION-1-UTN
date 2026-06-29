@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Nombre,Poblacion,Superficie,Continente
 Afganistan,42239856,652864,Asia
 Albania,2793592,28748,Europa
@@ -193,3 +194,200 @@ Yemen,28498687,527968,Asia
 Yibuti,958920,23200,Africa
 Zambia,17351822,752612,Africa
 Zimbabue,14645468,390757,Africa
+=======
+nombre,poblacion,superficie,continente
+Afganistan,42239856.0,652864.0,Asia
+Albania,2793592.0,28748.0,Europa
+Alemania,84607016.0,357022.0,Europa
+Andorra,85101.0,468.0,Europa
+Angola,35159000.0,1246700.0,Africa
+Antigua y Barbuda,100772.0,442.0,America
+Arabia Saudita,36947024.0,2149690.0,Asia
+Argelia,46810000.0,2381741.0,Africa
+Argentina,46735004.0,2780400.0,America
+Armenia,2777974.0,29743.0,Asia
+Australia,27724744.0,7692024.0,Oceania
+Austria,9027999.0,83871.0,Europa
+Azerbaiyan,10412652.0,86600.0,Asia
+Bahamas,407906.0,13940.0,America
+Bangladesh,172954320.0,147570.0,Asia
+Barbados,279912.0,430.0,America
+Baréin,1577059.0,765.0,Asia
+Bélgica,11754004.0,30528.0,Europa
+Belice,397483.0,22966.0,America
+Benin,12123200.0,112622.0,Africa
+Bielorrusia,9498700.0,207600.0,Europa
+Birma,53414374.0,676578.0,Asia
+Bolivia,11353142.0,1098581.0,America
+Bosnia y Herzegovina,3323929.0,51197.0,Europa
+Botsuana,2141206.0,581730.0,Africa
+Brasil,210147125.0,8515767.0,America
+Brunei,428697.0,5765.0,Asia
+Bulgaria,7000039.0,110879.0,Europa
+Burkina Faso,20321378.0,272967.0,Africa
+Burundi,10114505.0,27834.0,Africa
+Bután,771612.0,38394.0,Asia
+Cabo Verde,531239.0,4033.0,Africa
+Camboya,16718971.0,181035.0,Asia
+Camerún,25876380.0,475442.0,Africa
+Canadá,37589262.0,9984670.0,America
+Catar,2881060.0,11586.0,Asia
+Centroáfrica,4666377.0,622984.0,Africa
+Chad,14497000.0,1284000.0,Africa
+Republica Checa,10693939.0,78865.0,Europa
+Chile,18054726.0,756102.0,America
+China,1392730000.0,9596961.0,Asia
+Chipre,1170125.0,9251.0,Europa
+Colombia,50339443.0,1141748.0,America
+Comoras,806153.0,2235.0,Africa
+Congo,4741000.0,342000.0,Africa
+República Democrática del Congo,81339988.0,2344858.0,Africa
+Core del Norte,25778816.0,120538.0,Asia
+Core del Sur,51225308.0,100210.0,Asia
+Costa de Marfil,25823071.0,322463.0,Africa
+Costa Rica,5058007.0,51100.0,America
+Croacia,4087843.0,56594.0,Europa
+Cuba,11333483.0,109884.0,America
+Dinamarca,5806081.0,43094.0,Europa
+Republica Dominica,71986.0,751.0,America
+Dominicana,10738958.0,48671.0,America
+Ecuador,17373662.0,283561.0,America
+Egipto,98423595.0,1002450.0,Africa
+El Salvador,6486201.0,21041.0,America
+Emiratos Árabes Unidos,9630959.0,83600.0,Asia
+Eritrea,3497117.0,117600.0,Africa
+Eslovaquia,5450421.0,49035.0,Europa
+Eslovenia,2073894.0,20273.0,Europa
+España,46736776.0,505990.0,Europa
+Estados Unidos,327167434.0,9833517.0,America
+Estonia,1324820.0,45227.0,Europa
+Etiopía,109224559.0,1104300.0,Africa
+Filipinas,106651922.0,300000.0,Asia
+Finlandia,5523231.0,338424.0,Europa
+Fiyi,883483.0,18274.0,Oceania
+Francia,66987244.0,643801.0,Europa
+Gabón,2119275.0,267668.0,Africa
+Gambia,2347706.0,11295.0,Africa
+Georgia,3726549.0,69700.0,Asia
+Ghana,29767108.0,238533.0,Africa
+Granada,112003.0,344.0,America
+Grecia,10724599.0,131957.0,Europa
+Guatemala,16913503.0,108889.0,America
+Guinea,12771246.0,245857.0,Africa
+Guinea-Bisáu,1874309.0,36125.0,Africa
+Guinea Ecuatorial,1346886.0,28051.0,Africa
+Guyana,777859.0,214969.0,America
+Haití,10981229.0,27750.0,America
+Honduras,9587522.0,112492.0,America
+Hungría,9772756.0,93030.0,Europa
+India,1352617328.0,3287263.0,Asia
+Indonesia,267026366.0,1904569.0,Asia
+Irak,39309783.0,438317.0,Asia
+Iran,81162788.0,1648195.0,Asia
+Irlanda,4761657.0,70273.0,Europa
+Islandia,334300.0,103000.0,Europa
+Italia,60421760.0,301340.0,Europa
+Jamaica,2934853.0,10991.0,America
+Japón,126529100.0,377930.0,Asia
+Jordania,9956011.0,89342.0,Asia
+Kazajistán,18204499.0,2724900.0,Asia
+Kenya,51393010.0,580367.0,Africa
+Kirguistán,6228000.0,199951.0,Asia
+Kiribati,119446.0,811.0,Oceania
+Kuwait,4137309.0,17818.0,Asia
+Laos,7061507.0,236800.0,Asia
+Lesoto,2142249.0,30355.0,Africa
+Letonia,1926542.0,64589.0,Europa
+Libano,6825445.0,10452.0,Asia
+Liberia,4818977.0,111369.0,Africa
+Libia,6678567.0,1759540.0,Africa
+Liechtenstein,37922.0,160.0,Europa
+Lituania,2801543.0,65300.0,Europa
+Luxemburgo,607950.0,2586.0,Europa
+Macedonia,2083459.0,25713.0,Europa
+Madagascar,26262368.0,587041.0,Africa
+Malasia,31949777.0,330803.0,Asia
+Malaui,18622104.0,118484.0,Africa
+Maldivas,515696.0,300.0,Asia
+Malí,19077690.0,1240192.0,Africa
+Malta,441543.0,316.0,Europa
+Marruecos,36029138.0,446550.0,Africa
+Islas Marshall,59190.0,181.0,Oceania
+Mauricio,1265303.0,2040.0,Africa
+Mauritania,4403319.0,1030700.0,Africa
+Mexico,126190788.0,1964375.0,America
+Micronesia,104937.0,702.0,Oceania
+Moldavia,3542064.0,33843.0,Europa
+Mónaco,38682.0,2.0,Europa
+Mongolia,3170208.0,1564116.0,Asia
+Montenegro,622359.0,13812.0,Europa
+Mozambique,29668834.0,801590.0,Africa
+Namibia,2324388.0,825615.0,Africa
+Nauru,10824.0,21.0,Oceania
+Nepal,28087871.0,147181.0,Asia
+Nicaragua,6465513.0,130373.0,America
+Niger,22442948.0,1267000.0,Africa
+Nigeria,200963599.0,923768.0,Africa
+Noruega,5311916.0,385207.0,Europa
+Nueva Zelanda,4885500.0,268021.0,Oceania
+Oman,4829483.0,309500.0,Asia
+Paises Bajos,17231624.0,41543.0,Europa
+Pakistan,212215030.0,881912.0,Asia
+Palaos,18008.0,459.0,Oceania
+Palestina,4803269.0,6220.0,Asia
+Panamá,4176873.0,75417.0,America
+Papua Nueva Guinea,8251162.0,462840.0,Oceania
+Paraguay,6956071.0,406752.0,America
+Perú,31989256.0,1285216.0,America
+Polonia,37974750.0,312685.0,Europa
+Portugal,10276617.0,92090.0,Europa
+Reino Unido,66435600.0,243610.0,Europa
+Ruanda,12301939.0,26338.0,Africa
+Rumania,19405156.0,238397.0,Europa
+Rusia,144478050.0,17098242.0,Europa
+Islas Salomón,652858.0,28896.0,Oceania
+Samoa,196440.0,2842.0,Oceania
+San Cristóbal y Nieves,53192.0,261.0,America
+San Marino,33931.0,61.0,Europa
+San Vicente y las Granadinas,110211.0,389.0,America
+Santa Lucía,183627.0,616.0,America
+Santo Tomé y Príncipe,211028.0,964.0,Africa
+Senegal,15850567.0,196722.0,Africa
+Serbia,7076372.0,88361.0,Europa
+Seychelles,96762.0,455.0,Africa
+Sierra Leona,7650154.0,71740.0,Africa
+Singapur,5638676.0,719.0,Asia
+Siria,17070135.0,185180.0,Asia
+Somalia,15008154.0,637657.0,Africa
+Sri Lanka,21670000.0,65610.0,Asia
+Suazilandia,1132657.0,17364.0,Africa
+Sudáfrica,57779622.0,1219912.0,Africa
+Sudán,40533330.0,1861484.0,Africa
+Sudán del Sur,10975920.0,619745.0,Africa
+Suecia,10099265.0,450295.0,Europa
+Suiza,8570146.0,41285.0,Europa
+Surinam,558368.0,163820.0,America
+Tailandia,69428524.0,513120.0,Asia
+Tanzania,57310019.0,945087.0,Africa
+Tayikistán,8746000.0,143100.0,Asia
+Timor Oriental,1291359.0,14874.0,Asia
+Togo,7797694.0,56785.0,Africa
+Tonga,105697.0,747.0,Oceania
+Trinidad y Tobago,1363985.0,5128.0,America
+Túnez,11565204.0,163610.0,Africa
+Turmenistán,6031187.0,488100.0,Asia
+Turquía,82319724.0,783562.0,Asia
+Tuvalu,11646.0,26.0,Oceania
+Ucrania,44622516.0,603500.0,Europa
+Uganda,42723139.0,241038.0,Africa
+Uruguay,3456750.0,176215.0,America
+Uzbekistán,32981716.0,447400.0,Asia
+Vanuatu,292680.0,12189.0,Oceania
+Vaticano,825.0,0.44,Europa
+Venezuela,28515829.0,916445.0,America
+Vietnam,95540395.0,331210.0,Asia
+Yemen,28498687.0,527968.0,Asia
+Yibuti,958920.0,23200.0,Africa
+Zambia,17351822.0,752612.0,Africa
+Zimbabue,14645468.0,390757.0,Africa
+>>>>>>> Stashed changes
