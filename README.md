@@ -4,6 +4,6 @@ Integrantes:
 
 Lautaro Bustillo
 
-Damian Pennacchio
+Ana Clara Pennacchio
 
 Para iniciar el archivo, se debe abrir la carpeta completa en VSCODE
