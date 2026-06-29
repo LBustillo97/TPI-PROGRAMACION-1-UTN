@@ -1,13 +1,15 @@
 import csv
+from pathlib import Path
 
-
+BASE = Path(__file__).resolve().parent.parent
+ruta_csv = BASE / "CSV" / "dominio.csv"
 
 
 
 #GUARDAR DATOS
 
 def guardar_cambios(lista):
-    with open("./CSV/dominio.csv", "w", encoding="utf-8") as archivo:
+    with open(ruta_csv, "w", encoding="utf-8") as archivo:
         archivo.write("nombre,poblacion,superficie,continente\n")
 
         for pais in lista:
