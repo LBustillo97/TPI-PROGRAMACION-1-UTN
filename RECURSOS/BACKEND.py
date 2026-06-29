@@ -70,7 +70,7 @@ def agregar_pais(lista): #le pedimos los datos del nuevo pais al usuario, cheque
         print("Debe ingresar números.")
         return
 
-    continente = input("Continente: ").strip()
+    continente = input("Continente: ").strip().Title()
 
     if continente == "":
         print("Continente inválido.")
