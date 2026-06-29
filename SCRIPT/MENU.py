@@ -1,8 +1,9 @@
 import sys
 from pathlib import Path
-
-
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+BASE = Path(__file__).resolve().parent.parent
+ruta_csv = BASE / "CSV" / "dominio.csv"
 
 
 import csv
@@ -14,7 +15,7 @@ def menu():
 
     try:
 
-        archivo = open("./CSV/dominio.csv", "r", encoding="utf-8")
+        archivo = open(ruta_csv, "r", encoding="utf-8")
         
 
         lector = csv.DictReader(archivo)
