@@ -7,7 +7,7 @@ def menu():
 
     try:
 
-        archivo = open("CSV/dominio.csv", "r", encoding="utf-8")
+        archivo = open("./CSV/dominio.csv", "r", encoding="utf-8")
         
 
         lector = csv.DictReader(archivo)
